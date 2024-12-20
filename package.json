@@ -1,0 +1,59 @@
+{
+  "name": "example_site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "biome:check": "biome check",
+    "biome:fix": "pnpm biome:check --write",
+    "biome:ci": "biome ci",
+    "turbo": "pnpm dlx turbo@2.0.9",
+    "turbo:check": "pnpm turbo biome:check type:check",
+    "type:check": "tsc",
+    "up-interactive": "pnpm up -i",
+    "up-latest": "pnpm up-interactive -L",
+    "release": "cross-env HUSKY=0 commit-and-tag-version",
+    "push-release": "git push --follow-tags origin main"
+  },
+  "dependencies": {
+    "@million/lint": "^1.0.12",
+    "@tanstack/react-query": "^5.59.20",
+    "axios": "^1.7.7",
+    "lucide-react": "^0.344.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
+    "react-hook-form": "^7.53.2",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/types": "^19.5.0",
+    "@types/node": "^22.8.5",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/react-helmet": "^6.1.11",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.14.0",
+    "globals": "^15.12.0",
+    "postcss": "^8.4.49",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vite-plugin-checker": "^0.8.0",
+    "vite-plugin-pwa": "^0.20.5",
+    "vite-tsconfig-paths": "^5.0.1"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.12.1"
+}
